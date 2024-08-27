@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 )
-
+// update tests auto upload to gitlab.
 func main() {
 	// 创建一个默认的 Gin 引擎
 	router := gin.Default()
