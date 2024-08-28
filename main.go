@@ -2,9 +2,11 @@ package main
 
 import (
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 )
+
 // update tests auto upload to gitlab.
 func main() {
 	// 创建一个默认的 Gin 引擎
@@ -14,6 +16,8 @@ func main() {
 	router.GET("/hello", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "Hello, World!",
+			"array":   [...]int{100, 3: 400, 500},
+			"time":    time.Now(),
 		})
 	})
 
